@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SipiSix #34730 — FTC Robotics Team</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Blur Header -->
+  <header class="navbar-wrapper">
+    <nav class="navbar">
+      <!-- Left: Navigation Links -->
+      <div class="nav-left">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#awards" class="nav-link">Awards</a>
+        <a href="#sponsorship" class="nav-link">Sponsorship</a>
+      </div>
+
+      <!-- Center: Team Logo -->
+      <div class="nav-center">
+        <a href="#home" class="logo-link">
+          <img src="logo.png" alt="SipiSix Logo" class="nav-logo">
+        </a>
+      </div>
+
+      <!-- Right: Action Buttons -->
+      <div class="nav-right">
+        <a href="#sponsorship" class="btn btn-outline">Become a Partner</a>
+        <button class="btn btn-primary open-modal-btn">Contact Us</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-container">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          <span>FIRST Tech Challenge Team Kazakhstan</span>
+        </div>
+
+        <h1 class="hero-title">
+          SipiSix <span class="highlight">#34730</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          A youth robotics team from Kazakhstan building high-performance competitive robots, advancing STEM education, and aiming for global FTC championships.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#sponsorship" class="btn btn-primary btn-lg">Become a Partner &rarr;</a>
+          <button class="btn btn-outline btn-lg open-modal-btn">Book a Call</button>
+        </div>
+
+        <!-- Interactive 3D World / Globe Placeholder Card -->
+        <div class="globe-card">
+          <div class="globe-placeholder">
+            <div class="globe-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-text">KOKSHETAU, KAZAKHSTAN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="badge mb-2">
+          <span class="badge-dot"></span>
+          <span>About Us</span>
+        </div>
+        <h2 class="section-title">Who Are We?</h2>
+        <div class="grid grid-2">
+          <div class="about-text">
+            <p>
+                Representing <strong>Kokshetau BIL</strong> and <strong>Al-Farabi IT lyceum</strong> in Kokshetau, SipiSix #34730 brings together passionate coders, mechanical engineers, and hardware builders dedicated to engineering excellence.
+            </p>
+            <p>
+                We design custom precision mechanisms, write autonomous navigation algorithms, and compete at the highest national and international levels of <strong>FIRST Tech Challenge</strong>.
+            </p>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Student-Led Innovation</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">500+</span>
+                <span class="stat-label">Youth Inspired</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-media">
+            <div class="media-card">
+              <div class="media-placeholder">
+                <span>[ Team & Robot Photo ]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competitions Slider Section (Replaces Awards) -->
+    <section id="awards" class="section overflow-hidden">
+      <div class="container">
+        <div class="badge mb-2">
+          <span class="badge-dot"></span>
+          <span>Competitions</span>
+        </div>
+        <h2 class="section-title">Our Journey & Tournaments</h2>
+        <p class="section-subtitle">Explore the major robotics and tech competitions where team SipiSix #34730 showcased innovation and engineering excellence.</p>
+      </div>
+
+      <!-- Infinite Marquee Slider -->
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          
+          <!-- Card 1: Bilim Shyny 2026 -->
+          <div class="story-card" data-story="bilim">
+            <div class="card-bg-photo" style="background-image: url('bilim-photo.jpg');"></div>
+            <div class="card-logo-wrapper">
+              <img src="logo-bilim.png" alt="Bilim Shyny 2026 Logo" class="competition-logo">
+            </div>
+            <div class="card-footer">
+              <span class="read-story-btn">Read story &gt;</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Almaty TECH Cup XII -->
+          <div class="story-card" data-story="techcup">
+            <div class="card-bg-photo" style="background-image: url('techcup-photo.jpg');"></div>
+            <div class="card-logo-wrapper">
+              <img src="logo-techcup.png" alt="Almaty TECH Cup XII Logo" class="competition-logo">
+            </div>
+            <div class="card-footer">
+              <span class="read-story-btn">Read story &gt;</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Digital Bridge -->
+          <div class="story-card" data-story="digitalbridge">
+            <div class="card-bg-photo" style="background-image: url('digitalbridge-photo.jpg');"></div>
+            <div class="card-logo-wrapper">
+              <img src="logo-digitalbridge.png" alt="Digital Bridge Logo" class="competition-logo">
+            </div>
+            <div class="card-footer">
+              <span class="read-story-btn">Read story &gt;</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Astana Scrimage -->
+          <div class="story-card" data-story="astanascrimage">
+            <div class="card-bg-photo" style="background-image: url('astanascrimage-photo.jpg');"></div>
+            <div class="card-logo-wrapper">
+              <img src="logo-astanascrimage.png" alt="Astana Scrimage Logo" class="competition-logo">
+            </div>
+            <div class="card-footer">
+              <span class="read-story-btn">Read story &gt;</span>
+            </div>
+          </div>
+
+          <!-- DUPLICATE CARDS FOR INFINITE LOOP EFFECT -->
+          <div class="story-card" data-story="bilim">
+            <div class="card-bg-photo" style="background-image: url('bilim-photo.jpg');"></div>
+            <div class="card-logo-wrapper">
+              <img src="logo-bilim.png" alt="Bilim Shyny 2026 Logo" class="competition-logo">
+            </div>
+            <div class="card-footer">
+              <span class="read-story-btn">Read story &gt;</span>
+            </div>
+          </div>
+
+          <div class="story-card" data-story="techcup">
+            <div class="card-bg-photo" style="background-image: url('techcup-photo.jpg');"></div>
+            <div class="card-logo-wrapper">
+              <img src="logo-techcup.png" alt="Almaty TECH Cup XII Logo" class="competition-logo">
+            </div>
+            <div class="card-footer">
+              <span class="read-story-btn">Read story &gt;</span>
+            </div>
+          </div>
+
+          <div class="story-card" data-story="digitalbridge">
+            <div class="card-bg-photo" style="background-image: url('digitalbridge-photo.jpg');"></div>
+            <div class="card-logo-wrapper">
+              <img src="logo-digitalbridge.png" alt="Digital Bridge Logo" class="competition-logo">
+            </div>
+            <div class="card-footer">
+              <span class="read-story-btn">Read story &gt;</span>
+            </div>
+          </div>
+
+          <div class="story-card" data-story="astanascrimage">
+            <div class="card-bg-photo" style="background-image: url('astanascrimage-photo.jpg');"></div>
+            <div class="card-logo-wrapper">
+              <img src="logo-astanascrimage.png" alt="Digital Bridge Logo" class="competition-logo">
+            </div>
+            <div class="card-footer">
+              <span class="read-story-btn">Read story &gt;</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsorship Section -->
+    <section id="sponsorship" class="section">
+      <div class="container">
+        <div class="badge mb-2">
+          <span class="badge-dot"></span>
+          <span>Sponsor Packs</span>
+        </div>
+        <h2 class="section-title">Invest in the Next Generation</h2>
+        <p class="section-subtitle">Your support provides essential REV/goBILDA hardware, precision CNC parts, travel logistics, and competition registration.</p>
+
+        <div class="grid grid-3">
+          <!-- Bronze Tier -->
+          <div class="pricing-card">
+            <h3 class="tier-title">Bronze Partner</h3>
+            <div class="price">150,000 ₸ <span class="price-period">+</span></div>
+            <ul class="features-list">
+              <li>✓ Appreciation certificate</li>
+              <li>✓ Logo on website partner page</li>
+              <li>✓ Social media mention & shoutout</li>
+            </ul>
+            <button class="btn btn-outline btn-block open-modal-btn">Select Bronze</button>
+          </div>
+
+          <!-- Gold Tier (Featured) -->
+          <div class="pricing-card popular">
+            <div class="popular-badge">MOST POPULAR</div>
+            <h3 class="tier-title">Gold Partner</h3>
+            <div class="price">500,000 ₸ <span class="price-period">+</span></div>
+            <ul class="features-list">
+              <li>✓ All Bronze features included</li>
+              <li>✓ Medium logo placement on the robot</li>
+              <li>✓ Logo on official team jerseys</li>
+              <li>✓ Featured video post on social channels</li>
+            </ul>
+            <button class="btn btn-primary btn-block open-modal-btn">Select Gold</button>
+          </div>
+
+          <!-- Diamond Tier -->
+          <div class="pricing-card">
+            <h3 class="tier-title">General Sponsor</h3>
+            <div class="price">1,500,000 ₸ <span class="price-period">+</span></div>
+            <ul class="features-list">
+              <li>✓ All Gold features included</li>
+              <li>✓ Prominent primary logo on robot & pit banner</li>
+              <li>✓ Live robot demonstration at your company</li>
+              <li>✓ Exclusive media interview mentions</li>
+            </ul>
+            <button class="btn btn-outline btn-block open-modal-btn">Select General</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <img src="logo.png" alt="SipiSix" class="footer-logo">
+        <p>&copy; 2026 SipiSix FTC #34730. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#sponsorship">Sponsorship</a>
+        <button class="open-modal-btn text-btn">Contact Us</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Popup Window for Contact -->
+  <div id="contactModal" class="modal-backdrop">
+    <div class="modal-box">
+      <button id="closeModalBtn" class="modal-close">&times;</button>
+      <div class="modal-header">
+        <h2>Contact SipiSix #34730</h2>
+        <p>Have a question or want to sponsor our team? Send us a message and we'll reply shortly.</p>
+      </div>
+      <form id="contactForm" class="contact-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="companyName">Company / Name *</label>
+          <input type="text" id="companyName" required placeholder="e.g. Acme Corp or John Doe">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" required placeholder="name@company.com">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone / Telegram</label>
+          <input type="tel" id="phone" placeholder="+7 (___) ___-__-__">
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" rows="4" required placeholder="How would you like to collaborate?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Message &rarr;</button>
+      </form>
+    </div>
+  </div>
+  <!-- Modal Popup for Story Details -->
+  <div id="storyModal" class="modal-backdrop">
+    <div class="modal-box modal-large">
+      <button id="closeStoryModalBtn" class="modal-close">&times;</button>
+      <div id="storyModalContent" class="story-modal-body">
+        <!-- Content inserted dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

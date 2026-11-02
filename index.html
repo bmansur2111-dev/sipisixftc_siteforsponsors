@@ -1,105 +1,22 @@
-<!DOCTYPE html>
+5<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SipiSix #34730 — FTC Robotics Team</title>
-
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Ваш исходный CSS -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Новые стили глобуса -->
-  <style>
-    .globe-card {
-      position: relative;
-      height: clamp(410px, 45vw, 540px);
-      overflow: hidden;
-      border: 1px solid rgba(108, 147, 210, .16);
-      border-radius: 26px;
-      background: radial-gradient(
-        ellipse at 50% 44%,
-        #101f33 0%,
-        #0d192a 48%,
-        #0b1421 100%
-      );
-      box-shadow: 0 24px 70px #0005;
-    }
-
-    .globe-stage {
-      position: absolute;
-      inset: 0 0 44px;
-    }
-
-    #earth {
-      display: block;
-      width: 100%;
-      height: 100%;
-      cursor: grab;
-      touch-action: pan-y;
-      user-select: none;
-      -webkit-user-select: none;
-    }
-
-    #earth.dragging {
-      cursor: grabbing;
-    }
-
-    #earth:focus-visible {
-      outline: 2px solid #4f87f7;
-      outline-offset: -5px;
-      border-radius: 22px;
-    }
-
-    .globe-toolbar {
-      position: absolute;
-      inset: auto 20px 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      color: #7e94b4;
-      font-size: 10px;
-    }
-
-    .globe-reset {
-      padding: 5px 0 5px 8px;
-      border: 0;
-      background: none;
-      color: #a6bbd9;
-      font: inherit;
-      cursor: pointer;
-    }
-
-    .globe-reset:hover {
-      color: white;
-    }
-
-    .globe-reset:focus-visible {
-      outline: 2px solid #4f87f7;
-      outline-offset: 3px;
-    }
-
-    @media (max-width: 600px) {
-      .globe-card {
-        height: 410px;
-        border-radius: 20px;
-      }
-
-      .globe-toolbar {
-        inset: auto 13px 14px;
-        font-size: 9px;
-      }
-    }
-  </style>
 </head>
-
 <body>
+
+  <!-- Floating Blur Header -->
   <header class="navbar-wrapper">
     <nav class="navbar">
+      <!-- Left: Navigation Links -->
       <div class="nav-left">
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
@@ -107,12 +24,14 @@
         <a href="#sponsorship" class="nav-link">Sponsorship</a>
       </div>
 
+      <!-- Center: Team Logo -->
       <div class="nav-center">
         <a href="#home" class="logo-link">
           <img src="logo.png" alt="SipiSix Logo" class="nav-logo">
         </a>
       </div>
 
+      <!-- Right: Action Buttons -->
       <div class="nav-right">
         <a href="#sponsorship" class="btn btn-outline">Become a Partner</a>
         <button class="btn btn-primary open-modal-btn">Contact Us</button>
@@ -121,6 +40,7 @@
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section id="home" class="hero-section">
       <div class="hero-container">
         <div class="badge">
@@ -133,78 +53,32 @@
         </h1>
 
         <p class="hero-subtitle">
-          A youth robotics team from Kazakhstan building high-performance
-          competitive robots, advancing STEM education, and aiming for global
-          FTC championships.
+          A youth robotics team from Kazakhstan building high-performance competitive robots, advancing STEM education, and aiming for global FTC championships.
         </p>
 
         <div class="hero-cta">
-          <a href="#sponsorship" class="btn btn-primary btn-lg">
-            Become a Partner &rarr;
-          </a>
-          <button class="btn btn-outline btn-lg open-modal-btn">
-            Book a Call
-          </button>
-        </div>
-
-        <!-- Интерактивный 3D-глобус -->
-        <div class="globe-card">
-          <div class="globe-stage">
-            <canvas
-              id="earth"
-              tabindex="0"
-              role="img"
-              aria-label="Interactive Earth: Astana KAZ, Kokshetau KAZ, Houston USA"
-              aria-describedby="earthHelp"
-            ></canvas>
-          </div>
-
-          <div class="globe-toolbar">
-            <span id="earthHelp">
-              Drag to rotate · Arrow keys to explore
-            </span>
-            <button
-              id="resetEarth"
-              class="globe-reset"
-              type="button"
-            >
-              Reset view
-            </button>
-          </div>
-
-          <noscript>
-            Enable JavaScript to explore the globe.
-          </noscript>
+          <a href="#sponsorship" class="btn btn-primary btn-lg">Become a Partner &rarr;</a>
+          <button class="btn btn-outline btn-lg open-modal-btn">Book a Call</button>
         </div>
       </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="section">
       <div class="container">
         <div class="badge mb-2">
           <span class="badge-dot"></span>
           <span>About Us</span>
         </div>
-
         <h2 class="section-title">Who Are We?</h2>
-
         <div class="grid grid-2">
           <div class="about-text">
             <p>
-              Representing <strong>Kokshetau BIL</strong> and
-              <strong>Al-Farabi IT lyceum</strong> in Kokshetau,
-              SipiSix #34730 brings together passionate coders,
-              mechanical engineers, and hardware builders dedicated
-              to engineering excellence.
+                Representing <strong>Kokshetau BIL</strong> and <strong>Al-Farabi IT lyceum</strong> in Kokshetau, SipiSix #34730 brings together passionate coders, mechanical engineers, and hardware builders dedicated to engineering excellence.
             </p>
-
             <p>
-              We design custom precision mechanisms, write autonomous
-              navigation algorithms, and compete at the highest national
-              and international levels of
-              <strong>FIRST Tech Challenge</strong>.
+                We design custom precision mechanisms, write autonomous navigation algorithms, and compete at the highest national and international levels of <strong>FIRST Tech Challenge</strong>.
             </p>
-
             <div class="stats-grid">
               <div class="stat-card">
                 <span class="stat-num">100%</span>
@@ -216,7 +90,6 @@
               </div>
             </div>
           </div>
-
           <div class="about-media">
             <div class="media-card">
               <div class="media-placeholder">
@@ -228,33 +101,81 @@
       </div>
     </section>
 
+    <!-- Competitions Slider Section (Replaces Awards) -->
     <section id="awards" class="section overflow-hidden">
       <div class="container">
         <div class="badge mb-2">
           <span class="badge-dot"></span>
           <span>Competitions</span>
         </div>
-
         <h2 class="section-title">Our Journey & Tournaments</h2>
-        <p class="section-subtitle">
-          Explore the major robotics and tech competitions where team
-          SipiSix #34730 showcased innovation and engineering excellence.
-        </p>
+        <p class="section-subtitle">Explore the major robotics and tech competitions where team SipiSix #34730 showcased innovation and engineering excellence.</p>
       </div>
 
+      <!-- Infinite Marquee Slider -->
       <div class="marquee-wrapper">
         <div class="marquee-track">
+          
+          <!-- Card 1: Bilim Shyny 2026 -->
           <div class="story-card" data-story="bilim">
-            <div
-              class="card-bg-photo"
-              style="background-image: url('bilim-photo.jpg');"
-            ></div>
+            <div class="card-bg-photo" style="background-image: url('bilim-photo.jpg');"></div>
             <div class="card-logo-wrapper">
-              <img
-                src="logo-bilim.png"
-                alt="Bilim Shyny 2026 Logo"
-                class="competition-logo"
-              >
+              <img src="logo-bilim.png" alt="Bilim Shyny 2026 Logo" class="competition-logo">
+            </div>
+            <div class="card-footer">
+              <span class="read-story-btn">Read story &gt;</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Almaty TECH Cup XII -->
+          <div class="story-card" data-story="techcup">
+            <div class="card-bg-photo" style="background-image: url('techcup-photo.jpg');"></div>
+            <div class="card-logo-wrapper">
+              <img src="logo-techcup.png" alt="Almaty TECH Cup XII Logo" class="competition-logo">
+            </div>
+            <div class="card-footer">
+              <span class="read-story-btn">Read story &gt;</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Digital Bridge -->
+          <div class="story-card" data-story="digitalbridge">
+            <div class="card-bg-photo" style="background-image: url('digitalbridge-photo.jpg');"></div>
+            <div class="card-logo-wrapper">
+              <img src="logo-digitalbridge.png" alt="Digital Bridge Logo" class="competition-logo">
+            </div>
+            <div class="card-footer">
+              <span class="read-story-btn">Read story &gt;</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Astana Scrimage -->
+          <div class="story-card" data-story="astanascrimage">
+            <div class="card-bg-photo" style="background-image: url('astanascrimage-photo.JPG');"></div>
+            <div class="card-logo-wrapper">
+              <img src="logo-astanascrimage.png" alt="Astana Scrimage Logo" class="competition-logo">
+            </div>
+            <div class="card-footer">
+              <span class="read-story-btn">Read story &gt;</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Kokshetau Scrimage -->
+          <div class="story-card" data-story="kokshetauscrimage">
+            <div class="card-bg-photo" style="background-image: url('kokshetauscrimage-photo.JPG');"></div>
+            <div class="card-logo-wrapper">
+              <img src="logo-kokshetauscrimage.png" alt="Astana Scrimage Logo" class="competition-logo-kokshe">
+            </div>
+            <div class="card-footer">
+              <span class="read-story-btn">Read story &gt;</span>
+            </div>
+          </div>
+
+          <!-- DUPLICATE CARDS FOR INFINITE LOOP EFFECT -->
+          <div class="story-card" data-story="bilim">
+            <div class="card-bg-photo" style="background-image: url('bilim-photo.jpg');"></div>
+            <div class="card-logo-wrapper">
+              <img src="logo-bilim.png" alt="Bilim Shyny 2026 Logo" class="competition-logo">
             </div>
             <div class="card-footer">
               <span class="read-story-btn">Read story &gt;</span>
@@ -262,16 +183,9 @@
           </div>
 
           <div class="story-card" data-story="techcup">
-            <div
-              class="card-bg-photo"
-              style="background-image: url('techcup-photo.jpg');"
-            ></div>
+            <div class="card-bg-photo" style="background-image: url('techcup-photo.jpg');"></div>
             <div class="card-logo-wrapper">
-              <img
-                src="logo-techcup.png"
-                alt="Almaty TECH Cup XII Logo"
-                class="competition-logo"
-              >
+              <img src="logo-techcup.png" alt="Almaty TECH Cup XII Logo" class="competition-logo">
             </div>
             <div class="card-footer">
               <span class="read-story-btn">Read story &gt;</span>
@@ -279,16 +193,9 @@
           </div>
 
           <div class="story-card" data-story="digitalbridge">
-            <div
-              class="card-bg-photo"
-              style="background-image: url('digitalbridge-photo.jpg');"
-            ></div>
+            <div class="card-bg-photo" style="background-image: url('digitalbridge-photo.jpg');"></div>
             <div class="card-logo-wrapper">
-              <img
-                src="logo-digitalbridge.png"
-                alt="Digital Bridge Logo"
-                class="competition-logo"
-              >
+              <img src="logo-digitalbridge.png" alt="Digital Bridge Logo" class="competition-logo">
             </div>
             <div class="card-footer">
               <span class="read-story-btn">Read story &gt;</span>
@@ -296,168 +203,90 @@
           </div>
 
           <div class="story-card" data-story="astanascrimage">
-            <div
-              class="card-bg-photo"
-              style="background-image: url('astanascrimage-photo.JPG');"
-            ></div>
+            <div class="card-bg-photo" style="background-image: url('astanascrimage-photo.JPG');"></div>
             <div class="card-logo-wrapper">
-              <img
-                src="logo-astanascrimage.png"
-                alt="Astana Scrimage Logo"
-                class="competition-logo"
-              >
+              <img src="logo-astanascrimage.png" alt="Digital Bridge Logo" class="competition-logo">
             </div>
             <div class="card-footer">
               <span class="read-story-btn">Read story &gt;</span>
             </div>
           </div>
 
-          <!-- Повтор для бесконечной ленты -->
-          <div class="story-card" data-story="bilim">
-            <div
-              class="card-bg-photo"
-              style="background-image: url('bilim-photo.jpg');"
-            ></div>
+          <div class="story-card" data-story="kokshetauscrimage">
+            <div class="card-bg-photo" style="background-image: url('kokshetauscrimage-photo.JPG');"></div>
             <div class="card-logo-wrapper">
-              <img
-                src="logo-bilim.png"
-                alt="Bilim Shyny 2026 Logo"
-                class="competition-logo"
-              >
+              <img src="logo-kokshetauscrimage.png" alt="Digital Bridge Logo" class="competition-logo-kokshe">
             </div>
             <div class="card-footer">
               <span class="read-story-btn">Read story &gt;</span>
             </div>
           </div>
 
-          <div class="story-card" data-story="techcup">
-            <div
-              class="card-bg-photo"
-              style="background-image: url('techcup-photo.jpg');"
-            ></div>
-            <div class="card-logo-wrapper">
-              <img
-                src="logo-techcup.png"
-                alt="Almaty TECH Cup XII Logo"
-                class="competition-logo"
-              >
-            </div>
-            <div class="card-footer">
-              <span class="read-story-btn">Read story &gt;</span>
-            </div>
-          </div>
-
-          <div class="story-card" data-story="digitalbridge">
-            <div
-              class="card-bg-photo"
-              style="background-image: url('digitalbridge-photo.jpg');"
-            ></div>
-            <div class="card-logo-wrapper">
-              <img
-                src="logo-digitalbridge.png"
-                alt="Digital Bridge Logo"
-                class="competition-logo"
-              >
-            </div>
-            <div class="card-footer">
-              <span class="read-story-btn">Read story &gt;</span>
-            </div>
-          </div>
-
-          <div class="story-card" data-story="astanascrimage">
-            <div
-              class="card-bg-photo"
-              style="background-image: url('astanascrimage-photo.JPG');"
-            ></div>
-            <div class="card-logo-wrapper">
-              <img
-                src="logo-astanascrimage.png"
-                alt="Astana Scrimage Logo"
-                class="competition-logo"
-              >
-            </div>
-            <div class="card-footer">
-              <span class="read-story-btn">Read story &gt;</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
+    <!-- Sponsorship Section -->
     <section id="sponsorship" class="section">
       <div class="container">
         <div class="badge mb-2">
           <span class="badge-dot"></span>
           <span>Sponsor Packs</span>
         </div>
-
         <h2 class="section-title">Invest in the Next Generation</h2>
-
-        <p class="section-subtitle">
-          Your support provides essential REV/goBILDA hardware, precision
-          CNC parts, travel logistics, and competition registration.
-        </p>
+        <p class="section-subtitle">Your support provides essential REV/goBILDA hardware, precision CNC parts, travel logistics, and competition registration.</p>
 
         <div class="grid grid-3">
+          <!-- Bronze Tier -->
           <div class="pricing-card">
             <h3 class="tier-title">Bronze Partner</h3>
-            <div class="price">
-              150,000 ₸ <span class="price-period">+</span>
-            </div>
+            <div class="price">150,000 ₸ <span class="price-period">+</span></div>
             <ul class="features-list">
               <li>✓ Appreciation certificate</li>
               <li>✓ Logo on website partner page</li>
               <li>✓ Social media mention & shoutout</li>
             </ul>
-            <button class="btn btn-outline btn-block open-modal-btn">
-              Select Bronze
-            </button>
+            <button class="btn btn-outline btn-block open-modal-btn">Select Bronze</button>
           </div>
 
+          <!-- Gold Tier (Featured) -->
           <div class="pricing-card popular">
             <div class="popular-badge">MOST POPULAR</div>
             <h3 class="tier-title">Gold Partner</h3>
-            <div class="price">
-              500,000 ₸ <span class="price-period">+</span>
-            </div>
+            <div class="price">500,000 ₸ <span class="price-period">+</span></div>
             <ul class="features-list">
               <li>✓ All Bronze features included</li>
               <li>✓ Medium logo placement on the robot</li>
               <li>✓ Logo on official team jerseys</li>
               <li>✓ Featured video post on social channels</li>
             </ul>
-            <button class="btn btn-primary btn-block open-modal-btn">
-              Select Gold
-            </button>
+            <button class="btn btn-primary btn-block open-modal-btn">Select Gold</button>
           </div>
 
+          <!-- Diamond Tier -->
           <div class="pricing-card">
             <h3 class="tier-title">General Sponsor</h3>
-            <div class="price">
-              1,500,000 ₸ <span class="price-period">+</span>
-            </div>
+            <div class="price">1,500,000 ₸ <span class="price-period">+</span></div>
             <ul class="features-list">
               <li>✓ All Gold features included</li>
               <li>✓ Prominent primary logo on robot & pit banner</li>
               <li>✓ Live robot demonstration at your company</li>
               <li>✓ Exclusive media interview mentions</li>
             </ul>
-            <button class="btn btn-outline btn-block open-modal-btn">
-              Select General
-            </button>
+            <button class="btn btn-outline btn-block open-modal-btn">Select General</button>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-left">
         <img src="logo.png" alt="SipiSix" class="footer-logo">
         <p>&copy; 2026 SipiSix FTC #34730. All rights reserved.</p>
       </div>
-
       <div class="footer-right">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -467,666 +296,46 @@
     </div>
   </footer>
 
+  <!-- Modal Popup Window for Contact -->
   <div id="contactModal" class="modal-backdrop">
     <div class="modal-box">
       <button id="closeModalBtn" class="modal-close">&times;</button>
-
       <div class="modal-header">
         <h2>Contact SipiSix #34730</h2>
-        <p>
-          Have a question or want to sponsor our team?
-          Send us a message and we'll reply shortly.
-        </p>
+        <p>Have a question or want to sponsor our team? Send us a message and we'll reply shortly.</p>
       </div>
-
-      <form
-        id="contactForm"
-        class="contact-form"
-        onsubmit="handleFormSubmit(event)"
-      >
+      <form id="contactForm" class="contact-form" onsubmit="handleFormSubmit(event)">
         <div class="form-group">
           <label for="companyName">Company / Name *</label>
-          <input
-            type="text"
-            id="companyName"
-            required
-            placeholder="e.g. Acme Corp or John Doe"
-          >
+          <input type="text" id="companyName" required placeholder="e.g. Acme Corp or John Doe">
         </div>
-
         <div class="form-group">
           <label for="email">Email Address *</label>
-          <input
-            type="email"
-            id="email"
-            required
-            placeholder="name@company.com"
-          >
+          <input type="email" id="email" required placeholder="name@company.com">
         </div>
-
         <div class="form-group">
           <label for="phone">Phone / Telegram</label>
-          <input
-            type="tel"
-            id="phone"
-            placeholder="+7 (___) ___-__-__"
-          >
+          <input type="tel" id="phone" placeholder="+7 (___) ___-__-__">
         </div>
-
         <div class="form-group">
           <label for="message">Message *</label>
-          <textarea
-            id="message"
-            rows="4"
-            required
-            placeholder="How would you like to collaborate?"
-          ></textarea>
+          <textarea id="message" rows="4" required placeholder="How would you like to collaborate?"></textarea>
         </div>
-
-        <button type="submit" class="btn btn-primary btn-block">
-          Send Message &rarr;
-        </button>
+        <button type="submit" class="btn btn-primary btn-block">Send Message &rarr;</button>
       </form>
     </div>
   </div>
-
+  <!-- Modal Popup for Story Details -->
   <div id="storyModal" class="modal-backdrop">
     <div class="modal-box modal-large">
       <button id="closeStoryModalBtn" class="modal-close">&times;</button>
-      <div id="storyModalContent" class="story-modal-body"></div>
+      <div id="storyModalContent" class="story-modal-body">
+        <!-- Content inserted dynamically via JS -->
+      </div>
     </div>
   </div>
 
-  <!-- Ваш исходный JS: формы, окна и истории -->
+  <!-- JavaScript File -->
   <script src="script.js"></script>
-
-  <!-- Новый глобус -->
-  <script>
-  (() => {
-    'use strict';
-
-    const canvas = document.getElementById('earth');
-    const stage = canvas.parentElement;
-    const ctx = canvas.getContext('2d');
-
-    if (!ctx) return;
-
-    const RAD = Math.PI / 180;
-    const TAU = Math.PI * 2;
-    const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
-    const motion = matchMedia('(prefers-reduced-motion: reduce)');
-    const home = [-12 * RAD, 24 * RAD];
-
-    /*
-      Встроенная карта материков Natural Earth.
-      Эта строка — сжатые географические данные.
-      Не удаляйте и не изменяйте её.
-    */
-    const packed = atob(
-      '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 AwwCBGJtBx8gFhQZBQEWBI4CHRQECAIHB GJuBh4hFRYZGgWRAhqPAW4HGyMTGBkaBpICGI4BcAcXAQElEhgaGQWWAhQEA YsBbwcUKhEYBgEWFgaYAgMEFIYBcQYUKg8bAgQWFgWiAhSEAXIF Ei0NIhcVBaMCE4IBdQQPMA0iFxYEpAISgwF2AwwzDCMWFwWjAhGEAXYCCQEBNAwjFxYHpQIMhQGAATcMJB YVBAEDqAIKhAF9Ogs lFhYCBQOmAgkWAgIBaXkOAi8KJAUEDhcBBgOmAgcVBAECangMBA8KJQM GDRgEAgOnAgYRBwIEaXcICDAJJQMGCxYBBAMB BKgCBRATAwhbdgMMMQgkAwcKFgIDCKkCBg8aAQNbhAEyCCUCCQcWAgUEAQKpAgcFAgYIARRegwEyBgIBJAILAxcCBgQCAawCBgEGAyBdggEzBgECIwMJAxcDBwID A6sCMF2AATQEAgQhBAoBG AEK AQIErAI IAyZcgAE1AgMEIQUhAQkJrwIEAydcfjcBAwUgBSsJsQICBChbfTsFIwIqBAEGtwInXHs8BSMFHQIJAQIEAQG4AigEAVh5PQQkBRsEDAW3AjFXFwdYPgEnBhkGDQG6AjJWEgtYXAUFBhgJxgI0VAgEBA1XXQYFBhUJyAI1VgEaBAFQXwYEBhUKxwI1d05hBwYGFAjJAjZ5TGMGAgUSCsgCN3lLZQYBBg4OxgI5eElnDQsBAg8SA bICO3ZHa w cBB A oRDgEEA7ACO3V HbAgCAgkTBAMFAgMErQI9dkZuCQsUAgoEBK0CPHdFbwoJEgQKBgOtAkBzRHEICxEEAg4BCAGlAkEBA25EcwcMEQIDAQUJAQQHogJHbEN0CQoPBAcBAQ4IoQJJa0J1CQoOBAcSBgUDmQJKAQFoQHcLCA4EBhQFAwiXAlJjPXkKCA4DCAsDBAYCDBID/wFTYzx6CgkBAQkFBwYKBBUQ A/0B VWM6fAgRBAYGBwIHAQMZDgP6AVdiOn0HEQECAQYCAgMTAgMVDAT6AVlhOH8GGwIBA gECGBUL A/wBXF03gQEFGgMDAxUBBhEEAQIFBQH4AVxeNoMBBhgCBAEWAgYSAgcGAvYBXl02hQE GBAEuAgYU AQUIAvYBXV42gwEQKgE I E w4E9gFbXjaFAQ4zEhIE9AFaXjaJAQ0vFBUB8wFZYDWOAQsCBAEDAgIFBBQMBQUVAgEB8AFYXzaWAQ EEDA MFGwYGBBYBAQHwAVdgN5kBAgQBBwUeBAgFF AIBA fABVmE2nQ EFBQMtBhIDAQHvAVViN58BAgQDLgcUA+8BU2Q2zAEBDgIVA u8BUmU2tgEE EQKXAlBmNrgBAwEBAQIKBJY CUGU3EAOiAQwJBJcCTmY4DwOhAQ0JBZYCTmU5DwOgAQ0KBZcCTGY5DQaYAQIEDgoFlwJMZToOBZYBBQI OCwUBAZUCTGU6DQaVAR YLCCoC6gFKZTkMCJQBFwsIKgLsAUhkOgoKkwEbBwkqAhkB1AFGZDoHDZEBHgYJKwEWA9YBQ2U4CQyRAS EE CisBFQPZAUFlNwkMkQEjAgs/A9sBQWU0DQuR ATE9BN0BPmYzDguR ATE9BN0BPmcxDwuQATKeAj5oLhELjwE1nAI+aC4R CowBO5oCPWosEgqKAT4eA/gBPGssEQqIAUEfAvgBPGwsDwuFAUUeA/cBPGwsDwqEAUcfBPU B Om8sDgqDAUseA/QBOm8sDgqDAUuVAjR1LA8JgwFLlQIzdiwPCYM BTJQCMXgrEAiDAV+SAi58KBMHhAFOkQIufSYW BIcBTpACLn0lGAGHAVCSA i1+JaABUY8CLX8koAFRjwIuf iSiAU+PAi2AASKjAU+PAi2BASGjAVCNAi6BASGkAU+NAiyEAR+mAU2OAiuGARyoAU2OAiuHARunAU6NAiuIARqpAU2NAiqKARmqAUuPAiiLAR esAR0EKo8CJ4wBFq0BGAookAImjAEWrgEU ESWPAieNAROwARIUI5ACJo4BEbEBEhYE ARyRAiWPAQi6AQkFARkDAhwrAeQBHgIElAECvwEHIAECHCsC5AEf2wIEJB0sA+EBIIY DGS4C4QEhiAMWLgPfASKIAxUwBNwBIokDFTED3AEiigMTMgnWASGMAw42CNgBH ZMDAwIENwjYAR egAwE2CdgBGNcDCNkBGNUDAQQE2gEYnQM CBAIvBAIE2QETAgOeAwgvCdoBE6Q DBy4GAQHcARahAwcuBd8BAgEUoAMGLgXgAQIBE KUD BS0F4wERpgMCKwrgARPSAwfkAR PRAwj jAR PRAwjkARDTAwnjARDUAwfkAR LWA wPnAR O8B RS8B RS7BRKPA gOsAxGQAgWrAxCQAgSsAw7DBQzEBQwSAQEBrgUODgitBQ4OAQIBsAUNxQUGAQXFBQzGBQ3EBQ7DBQkBA8kFAcJUA8sFBscFBsUFBskFBI sDA b4CBugBBlwEEgEqArsCCeMBDDwCGgcMCBABBgy4AgjkAQ47BBYjCDClAgfhARgIASOB AaMCBd4BIAMMF4U BowIF1wE2E4wBmQIBAwnBAQQL OxCbAYoCBAILvwEKB TwPogGDAhOMAQEKAQcFFVAHrQGAAgYBDYgBCQMU BVcKsAH+ARVtAR OFAQe/AesBGWYDAw4CiQEFxwGtAQgDASoOAgxknwEHyAGtAQsrDQINYfACqQEK B QENASMB Bg5d8gJ8BAYBBgEeCwUV CAgEAQkZWPUCgAEEAggKARRWWPQ CbhIEBAETAgEQVF rvAms9B wQETFzuAl8EA54BWvACY aIBWPMC Y50BUIADS wIRnQFTgQN M p wFYhwNKqgE1ARmNA0A FBagBMgwPlgM6CAidATcND5YDPQcHmwE3Dw6QA0UBGZABHgIREhr+ AmmTAQ0OCxYc/AJnmQEKDQoQGIYDVbcBCgETARKVA1e4ARoLBJkDWrsBC7QDVb4BAr4DUoUFKgEfhwUWCAQKJJIFA yAiyQUJ3Dc='.replace(/\s/g, '')
-    );
-
-    const land = new Uint8Array(720 * 360);
-
-    let cursor = 0;
-    let position = 0;
-    let value = 0;
-
-    while (cursor < packed.length) {
-      let run = 0;
-      let shift = 0;
-      let byte;
-
-      do {
-        byte = packed.charCodeAt(cursor++);
-        run |= (byte & 127) << shift;
-        shift += 7;
-      } while (byte & 128);
-
-      if (value) {
-        land.fill(1, position, position + run);
-      }
-
-      position += run;
-      value ^= 1;
-    }
-
-    const sphere = (lat, lon) => [
-      Math.cos(lat) * Math.sin(lon),
-      Math.sin(lat),
-      Math.cos(lat) * Math.cos(lon)
-    ];
-
-    const points = [];
-
-    let seed = 34730;
-
-    function random() {
-      seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
-      return seed / 4294967296;
-    }
-
-    for (let i = 0; i < 160000; i++) {
-      const lat = Math.asin(1 - 2 * random());
-      const lon = random() * TAU - Math.PI;
-
-      const row = clamp(
-        Math.floor((90 - lat / RAD) * 2),
-        0,
-        359
-      );
-
-      const col = clamp(
-        Math.floor((lon / RAD + 180) * 2),
-        0,
-        719
-      );
-
-      if (land[row * 720 + col]) {
-        points.push(sphere(lat, lon));
-      }
-    }
-
-    const cities = [
-      {
-        text: 'KOKSHETAU KAZ',
-        lat: 53.2833,
-        lon: 69.3833,
-        dy: -44
-      },
-      {
-        text: 'ASTANA KAZ',
-        lat: 51.1694,
-        lon: 71.4491,
-        dy: 14
-      },
-      {
-        text: 'HOUSTON USA',
-        lat: 29.7604,
-        lon: -95.3698,
-        dy: -14,
-        left: true
-      }
-    ];
-
-    cities.forEach(city => {
-      city.point = sphere(city.lat * RAD, city.lon * RAD);
-    });
-
-    let width = 0;
-    let height = 0;
-    let radius = 0;
-
-    let longitude = home[0];
-    let latitude = home[1];
-
-    let sinLon;
-    let cosLon;
-    let sinLat;
-    let cosLat;
-
-    let pointer = null;
-    let previousX = 0;
-    let previousY = 0;
-
-    let velocity = 0;
-    let lastMove = 0;
-    let lastInteraction = performance.now();
-
-    let frame = 0;
-    let lastFrame = 0;
-    let lastDraw = 0;
-
-    let visible = true;
-    let resetting = false;
-
-    function project(point) {
-      const x = point[0] * cosLon - point[2] * sinLon;
-      const z = point[0] * sinLon + point[2] * cosLon;
-
-      return [
-        x,
-        point[1] * cosLat - z * sinLat,
-        point[1] * sinLat + z * cosLat
-      ];
-    }
-
-    function circle(x, y, r, color) {
-      ctx.beginPath();
-      ctx.arc(x, y, r, 0, TAU);
-      ctx.fillStyle = color;
-      ctx.fill();
-    }
-
-    function draw() {
-      if (!width || !height) return;
-
-      sinLon = Math.sin(longitude);
-      cosLon = Math.cos(longitude);
-      sinLat = Math.sin(latitude);
-      cosLat = Math.cos(latitude);
-
-      const cx = width / 2;
-      const cy = height / 2;
-
-      ctx.clearRect(0, 0, width, height);
-
-      // Точечная орбита вокруг планеты.
-      ctx.save();
-      ctx.beginPath();
-
-      ctx.ellipse(
-        cx,
-        cy,
-        radius * 1.13,
-        radius * 1.05,
-        -.42,
-        Math.PI * 1.02,
-        Math.PI * 2.04
-      );
-
-      ctx.setLineDash([1, 8]);
-      ctx.lineWidth = 1.6;
-      ctx.strokeStyle = 'rgba(72,124,218,.32)';
-      ctx.stroke();
-      ctx.restore();
-
-      // Тёмная поверхность океана.
-      const ocean = ctx.createRadialGradient(
-        cx - radius * .3,
-        cy - radius * .4,
-        0,
-        cx,
-        cy,
-        radius
-      );
-
-      ocean.addColorStop(0, '#0e1b2d');
-      ocean.addColorStop(1, '#0c1727');
-
-      circle(cx, cy, radius, ocean);
-
-      // Материки из синих точек.
-      const paths = Array.from(
-        { length: 7 },
-        () => new Path2D()
-      );
-
-      const dot = Math.max(.8, radius / 155);
-
-      for (const point of points) {
-        const p = project(point);
-
-        if (p[2] <= 0) continue;
-
-        const size = dot * (.65 + .35 * p[2]);
-        const index = Math.min(6, Math.floor(p[2] * 7));
-
-        paths[index].rect(
-          cx + p[0] * radius - size / 2,
-          cy - p[1] * radius - size / 2,
-          size,
-          size
-        );
-      }
-
-      paths.forEach((path, i) => {
-        ctx.fillStyle = `rgba(72,131,245,${.7 + i * .045})`;
-        ctx.fill(path);
-      });
-
-      // Географические метки и подписи.
-      const used = [];
-
-      ctx.font = `600 ${
-        width < 500 ? 9 : 11
-      }px Inter,Arial,sans-serif`;
-
-      ctx.textBaseline = 'middle';
-
-      for (const city of cities) {
-        const p = project(city.point);
-
-        // Город на обратной стороне скрывается за планетой.
-        if (p[2] <= .035) continue;
-
-        const x = cx + p[0] * radius;
-        const y = cy - p[1] * radius;
-
-        const w = ctx.measureText(city.text).width + 29;
-        const h = 27;
-
-        const lx = clamp(
-          x + (city.left ? -w - 18 : 20),
-          8,
-          width - w - 8
-        );
-
-        let ly = clamp(
-          y + city.dy,
-          8,
-          height - h - 8
-        );
-
-        // Разносим близкие подписи Astana и Kokshetau.
-        for (const b of used) {
-          if (
-            lx < b.x + b.w + 5 &&
-            lx + w + 5 > b.x &&
-            ly < b.y + h + 6 &&
-            ly + h + 6 > b.y
-          ) {
-            ly = clamp(
-              b.y + h + 8,
-              8,
-              height - h - 8
-            );
-          }
-        }
-
-        used.push({ x: lx, y: ly, w });
-
-        ctx.save();
-        ctx.globalAlpha = clamp(p[2] * 5, .25, 1);
-
-        ctx.beginPath();
-        ctx.moveTo(x, y);
-
-        ctx.lineTo(
-          clamp(x, lx + 4, lx + w - 4),
-          clamp(y, ly + 4, ly + h - 4)
-        );
-
-        ctx.strokeStyle = 'rgba(105,153,238,.55)';
-        ctx.lineWidth = 1;
-        ctx.stroke();
-
-        circle(x, y, 10, 'rgba(89,145,255,.13)');
-        circle(x, y, 5, 'rgba(89,145,255,.3)');
-        circle(x, y, 2.7, '#a5c9ff');
-
-        ctx.beginPath();
-        ctx.roundRect(lx, ly, w, h, 6);
-
-        ctx.fillStyle = 'rgba(11,22,38,.93)';
-        ctx.fill();
-
-        ctx.strokeStyle = 'rgba(96,142,220,.24)';
-        ctx.stroke();
-
-        circle(
-          lx + 10,
-          ly + h / 2,
-          5,
-          'rgba(79,135,247,.15)'
-        );
-
-        circle(
-          lx + 10,
-          ly + h / 2,
-          2.4,
-          '#75a6ff'
-        );
-
-        ctx.fillStyle = '#d0ddf5';
-        ctx.fillText(
-          city.text,
-          lx + 21,
-          ly + h / 2 + .5
-        );
-
-        ctx.restore();
-      }
-    }
-
-    function wake() {
-      if (!frame && visible && !document.hidden) {
-        frame = requestAnimationFrame(tick);
-      }
-    }
-
-    function tick(now) {
-      frame = 0;
-
-      if (!visible || document.hidden) return;
-
-      const dt = Math.min(
-        (now - lastFrame) / 1000 || 0,
-        .05
-      );
-
-      lastFrame = now;
-
-      if (resetting) {
-        const amount = motion.matches
-          ? 1
-          : 1 - Math.exp(-dt * 9);
-
-        longitude += (home[0] - longitude) * amount;
-        latitude += (home[1] - latitude) * amount;
-
-        if (
-          Math.abs(longitude - home[0]) +
-          Math.abs(latitude - home[1]) < .0002
-        ) {
-          longitude = home[0];
-          latitude = home[1];
-          resetting = false;
-        }
-      } else if (pointer === null && !motion.matches) {
-        longitude += velocity * dt;
-        velocity *= Math.exp(-dt * 4.5);
-
-        // Медленное вращение после 6 секунд бездействия.
-        if (now - lastInteraction > 6000) {
-          longitude -= dt * .035;
-        }
-      }
-
-      if (
-        now - lastDraw >= 1000 / 30 ||
-        motion.matches
-      ) {
-        draw();
-        lastDraw = now;
-      }
-
-      if (!motion.matches || resetting) {
-        wake();
-      }
-    }
-
-    function resize() {
-      const box = stage.getBoundingClientRect();
-
-      width = box.width;
-      height = box.height;
-
-      radius = Math.min(
-        height * .414,
-        width * .32
-      );
-
-      const dpr = Math.min(devicePixelRatio || 1, 2);
-
-      canvas.width = Math.round(width * dpr);
-      canvas.height = Math.round(height * dpr);
-
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-      draw();
-      wake();
-    }
-
-    canvas.addEventListener('pointerdown', event => {
-      if (!event.isPrimary || event.button !== 0) return;
-
-      pointer = event.pointerId;
-      previousX = event.clientX;
-      previousY = event.clientY;
-
-      lastMove = lastInteraction = performance.now();
-
-      velocity = 0;
-      resetting = false;
-
-      canvas.setPointerCapture(pointer);
-      canvas.classList.add('dragging');
-
-      if (event.pointerType === 'mouse') {
-        canvas.focus({ preventScroll: true });
-      }
-
-      wake();
-    });
-
-    canvas.addEventListener('pointermove', event => {
-      if (event.pointerId !== pointer) return;
-
-      const now = performance.now();
-      const dx = event.clientX - previousX;
-      const dy = event.clientY - previousY;
-
-      const factor = 2.4 / Math.max(radius, 100);
-
-      longitude -= dx * factor;
-
-      latitude = clamp(
-        latitude + dy * factor,
-        -Math.PI * .45,
-        Math.PI * .45
-      );
-
-      velocity = clamp(
-        -dx * factor /
-          Math.max((now - lastMove) / 1000, .016),
-        -1.8,
-        1.8
-      );
-
-      previousX = event.clientX;
-      previousY = event.clientY;
-
-      lastMove = lastInteraction = now;
-
-      draw();
-      wake();
-    });
-
-    function release(event) {
-      if (event.pointerId !== pointer) return;
-
-      if (
-        event.type === 'pointercancel' ||
-        performance.now() - lastMove > 120 ||
-        motion.matches
-      ) {
-        velocity = 0;
-      }
-
-      pointer = null;
-      lastInteraction = performance.now();
-
-      canvas.classList.remove('dragging');
-
-      if (canvas.hasPointerCapture(event.pointerId)) {
-        canvas.releasePointerCapture(event.pointerId);
-      }
-
-      wake();
-    }
-
-    [
-      'pointerup',
-      'pointercancel',
-      'lostpointercapture'
-    ].forEach(name => {
-      canvas.addEventListener(name, release);
-    });
-
-    canvas.addEventListener('keydown', event => {
-      const actions = {
-        ArrowLeft: [-.12, 0],
-        ArrowRight: [.12, 0],
-        ArrowUp: [0, .1],
-        ArrowDown: [0, -.1]
-      };
-
-      if (!actions[event.key]) return;
-
-      event.preventDefault();
-
-      resetting = false;
-      velocity = 0;
-
-      longitude += actions[event.key][0];
-
-      latitude = clamp(
-        latitude + actions[event.key][1],
-        -Math.PI * .45,
-        Math.PI * .45
-      );
-
-      lastInteraction = performance.now();
-
-      draw();
-      wake();
-    });
-
-    document
-      .getElementById('resetEarth')
-      .addEventListener('click', () => {
-        longitude = home[0] + Math.atan2(
-          Math.sin(longitude - home[0]),
-          Math.cos(longitude - home[0])
-        );
-
-        velocity = 0;
-        resetting = true;
-        lastInteraction = performance.now();
-
-        wake();
-      });
-
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) {
-        cancelAnimationFrame(frame);
-        frame = 0;
-      } else {
-        lastFrame = performance.now();
-        wake();
-      }
-    });
-
-    motion.addEventListener('change', () => {
-      velocity = 0;
-      wake();
-    });
-
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(entries => {
-        visible = entries[0].isIntersecting;
-
-        if (visible) {
-          lastFrame = performance.now();
-          wake();
-        } else {
-          cancelAnimationFrame(frame);
-          frame = 0;
-        }
-      }, {
-        rootMargin: '120px'
-      }).observe(stage);
-    }
-
-    if ('ResizeObserver' in window) {
-      new ResizeObserver(resize).observe(stage);
-    } else {
-      addEventListener('resize', resize);
-    }
-
-    resize();
-  })();
-  </script>
 </body>
 </html>

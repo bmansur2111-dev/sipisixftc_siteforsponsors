@@ -212,56 +212,6 @@ body {
   margin-bottom: 60px;
 }
 
-/* Globe Card */
-.globe-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 24px;
-  height: 380px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-}
-
-.globe-placeholder {
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(0, 136, 204, 0.15) 0%, transparent 70%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.globe-marker {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(7, 10, 15, 0.8);
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: 1px solid var(--accent-blue);
-}
-
-.marker-dot {
-  width: 10px;
-  height: 10px;
-  background: var(--accent-cyan);
-  border-radius: 50%;
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 168, 255, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 168, 255, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 168, 255, 0); }
-}
-
-.marker-text {
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
 /* --------------------------------------------------------------------------
    3. Sections & Cards
    -------------------------------------------------------------------------- */
@@ -650,6 +600,12 @@ body {
   object-fit: contain;
 }
 
+.competition-logo-kokshe {
+  max-width: 190px;
+  max-height: 110px;
+  object-fit: contain;
+}
+
 .card-footer {
   position: relative;
   z-index: 3;
@@ -704,3 +660,44 @@ body {
   color: var(--text-muted);
   margin: 20px 0;
 }
+/* Final globe styles: same file is published and included in the ZIP. */
+
+.globe-card {
+  position: relative;
+  height: clamp(410px, 45vw, 540px);
+  overflow: hidden;
+  border: 1px solid rgba(108,147,210,.16);
+  border-radius: 26px;
+  background: radial-gradient(ellipse at 50% 44%,#101f33 0%,#0d192a 48%,#0b1421 100%);
+  box-shadow: 0 24px 70px #0005;
+}
+.globe-stage { position: absolute; inset: 0 0 44px; }
+#earth { display: block; width: 100%; height: 100%; cursor: grab; touch-action: pan-y; user-select: none; }
+#earth.dragging { cursor: grabbing; }
+#earth:focus-visible { outline: 2px solid #4f87f7; outline-offset: -5px; border-radius: 22px; }
+.globe-toolbar { position: absolute; inset: auto 20px 14px; display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #7e94b4; font-size: 10px; }
+.globe-reset { padding: 5px 0 5px 8px; border: 0; background: none; color: #a6bbd9; font: inherit; cursor: pointer; }
+.globe-reset:hover { color: white; }
+.globe-reset:focus-visible { outline: 2px solid #4f87f7; outline-offset: 3px; }
+@media(max-width:600px) {
+  .globe-card { height: 410px; border-radius: 20px; }
+  .globe-toolbar { inset: auto 13px 14px; font-size: 9px; }
+}
+
+.competition-name{font-family:var(--font-heading);font-size:1.7rem;line-height:1.2;text-align:center;color:#eff6ff}.nav-logo,.footer-logo{object-fit:contain}
+
+.earth-overlay{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.earth-city{position:absolute;top:0;left:0;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;min-height:29px;padding:5px 9px;border:1px solid #608edc38;border-radius:8px;background:#0b1626ed;color:#d0ddf5;font:600 11px/1.1 var(--font-body);cursor:pointer;pointer-events:auto;z-index:2}
+.earth-city::before{content:'';width:6px;height:6px;flex-shrink:0;border-radius:50%;background:#75a6ff;box-shadow:0 0 0 4px #4f87f726}
+.earth-city-symbol{color:#7093ca;font-size:16px;font-weight:400;line-height:1}
+.earth-city:hover,.earth-city[aria-expanded=true]{color:#fff;border-color:#659afa;background:#14243e}
+.earth-city:focus-visible{outline:2px solid #82b1ff;outline-offset:3px}
+.earth-city[hidden],.earth-popup[hidden],.earth-popup-image[hidden]{display:none}
+.earth-popup{position:absolute;top:0;left:0;width:210px;max-width:calc(100% - 16px);max-height:calc(100% - 16px);padding:8px;overflow:auto;border:1px solid #628fda42;border-radius:13px;background:#101d32;box-shadow:0 14px 35px #0006;pointer-events:auto;z-index:5;text-align:left}
+.earth-popup-image{display:block;width:100%;height:135px;object-fit:cover;border-radius:8px;background:#1b2c47}
+.earth-popup-body{padding:9px 3px 4px}
+.earth-popup-body h3{font:600 12px/1.3 var(--font-body);color:#e1ebff;margin:0 0 6px}
+.earth-popup-description{font:400 11px/1.5 var(--font-body);color:#aebed7;margin:0;overflow-wrap:anywhere;white-space:pre-line}
+.earth-popup-close{position:absolute;top:12px;right:12px;width:25px;height:25px;display:flex;align-items:center;justify-content:center;border:1px solid #ffffff30;border-radius:50%;background:#0b1421db;color:white;font:18px/1 Arial,sans-serif;cursor:pointer}
+.earth-popup-close:focus-visible{outline:2px solid #82b1ff;outline-offset:2px}
+@media(max-width:600px){.earth-city{font-size:9px;gap:5px;padding:5px 7px}.earth-popup{width:185px}.earth-popup-image{height:118px}}

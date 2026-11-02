@@ -83,6 +83,14 @@ const storyData = {
     img1: "Digital Bridge Booth & Robot Live Demo",
     text2: "We presented live robot demonstrations, discussed the future of youth STEM initiatives in Kazakhstan, and established valuable contacts for future season funding.",
     img2: "Exhibition Floor & Public Interaction"
+  },
+  kokshetauscrimage: {
+    title: "Kokshetauscrimage",
+    subtitle: "International Innovation & Technology Forum",
+    text1: "Digital Bridge served as an extraordinary platform to showcase our robot to tech leaders, government dignitaries, and international sponsors.",
+    img1: "Digital Bridge Booth & Robot Live Demo",
+    text2: "We presented live robot demonstrations, discussed the future of youth STEM initiatives in Kazakhstan, and established valuable contacts for future season funding.",
+    img2: "Exhibition Floor & Public Interaction"
   }
 };
 

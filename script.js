@@ -146,3 +146,59 @@ function handleFormSubmit(event) {
   document.getElementById('contactForm').reset();
   document.getElementById('contactModal').classList.remove('active');
 }
+
+async function handleFormSubmit(event) {
+    event.preventDefault(); // Предотвращаем перезагрузку страницы
+
+    // Собираем данные из полей по их точным ID из HTML
+    const company = document.getElementById('companyName').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value || 'Не указан';
+    const message = document.getElementById('message').value;
+
+    // Твои данные бота и чата
+    const BOT_TOKEN = "9211215125:AAE15MTJ2xTWz0IDpiXZRydlpYvpgfF0MkI";
+    const CHAT_ID = "-1003882821700";
+
+    // Формируем текст сообщения для Telegram
+    const text = `🚨 *Новая заявка с сайта SipiSix #34730!*\n\n` +
+                 `🏢 *Компания/Имя:* ${company}\n` +
+                 `📧 *Email:* ${email}\n` +
+                 `📱 *Телефон/Telegram:* ${phone}\n` +
+                 `💬 *Сообщение:* \n${message}`;
+
+    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                chat_id: CHAT_ID,
+                text: text,
+                parse_mode: 'Markdown'
+            })
+        });
+
+        const data = await response.json();
+
+        if (data.ok) {
+            alert('Спасибо! Ваше сообщение успешно отправлено команде SipiSix.');
+            
+            // Очищаем форму после успешной отправки
+            document.getElementById('contactForm').reset();
+            
+            // Если у тебя модальное окно закрывается автоматически после отправки, 
+            // можешь раскомментировать строчку ниже:
+            // document.getElementById('contactModal').style.display = 'none';
+        } else {
+            alert('Ошибка при отправке в Telegram. Проверь консоль.');
+            console.error('Telegram Error:', data);
+        }
+    } catch (error) {
+        alert('Ошибка сети. Проверь подключение к интернету.');
+        console.error('Network Error:', error);
+    }
+}
